@@ -28,7 +28,8 @@ DEBUG = True
 SESSION_SAVE_EVERY_REQUEST = True
 
 ALLOWED_HOSTS = [
-    'localhost'
+    'localhost',
+    '127.0.0.1',
 ]
 
 # Application definition
@@ -126,8 +127,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 
 # OAuth specific variables
 DISCOVERY_DOCUMENT = 'https://developer.api.intuit.com/.well-known/openid_sandbox_configuration/'
-CLIENT_ID = '<EnterYourAppClientID>'
-CLIENT_SECRET = '<EnterYourAppClientSecret>'
+CLIENT_ID = 'ABNiAGlpNU7JrtO1e0RkVBmBgvxWY4YZBUcsf3cYB8AlpvclO9'
+CLIENT_SECRET = 'wlojaONSFixjtrA0d0BSVcenS6TkG0MKEJ4gpgAA'
 REDIRECT_URI = 'http://localhost:8000/sampleappoauth2/authCodeHandler'
 ACCOUNTING_SCOPE = 'com.intuit.quickbooks.accounting'
 OPENID_SCOPES = ['openid', 'profile', 'email', 'phone', 'address']

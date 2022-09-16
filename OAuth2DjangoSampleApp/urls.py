@@ -14,12 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-from django.conf.urls import include, url
+# from django.conf.urls import include
+from django.urls import include, path
 from django.contrib import admin
 from django.views.generic.base import RedirectView
 
 urlpatterns = [
-    url(r'^$', RedirectView.as_view(pattern_name='sampleAppOAuth2:index')),
-    url(r'^(?i)sampleAppOAuth2/', include('sampleAppOAuth2.urls', namespace='sampleAppOAuth2')),
-    url(r'^(?i)admin/', admin.site.urls),
+    path(r'', RedirectView.as_view(pattern_name='sampleAppOAuth2:index')),
+    path(r'sampleAppOAuth2/', include('sampleAppOAuth2.urls')),
+    path(r'admin/', admin.site.urls),
 ]
